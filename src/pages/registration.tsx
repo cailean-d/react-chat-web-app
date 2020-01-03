@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Registration = () => {
+const Registration = (props: any) => {
   return (
     <div>Login</div>
   )
