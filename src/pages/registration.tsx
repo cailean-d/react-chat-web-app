@@ -5,7 +5,7 @@ const Registration = (props: any) => {
   useTitle('Registration Page')
 
   return (
-    <div>Login</div>
+    <div className='page-container'>Registration</div>
   )
 }
 

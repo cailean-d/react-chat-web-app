@@ -5,7 +5,7 @@ const Home = (props: any) => {
   useTitle('Home Page')
 
   return (
-    <div>Home</div>
+    <div className='page-container'>Home</div>
   )
 }
 

@@ -1,0 +1,133 @@
+.formPanel {
+  text-transform: uppercase;
+  background: rgba(4, 4, 4, 0.56);
+  box-shadow: 0px 0px 20px 5px #1F181B;
+  padding: 40px 35px;
+  width: 450px;
+  user-select: none;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 20px;
+}
+
+.formIcon {
+  display: inline-block;
+  position: absolute;
+  left: 12px;
+  bottom: 15px;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.formLabel {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 2em;
+  letter-spacing: 2px;
+}
+
+.regPanel {
+  font-size: 13px;
+  color: #eee;
+  margin-top: 3em;
+  text-align: center;
+  text-transform: none;
+}
+
+.regLink {
+  color: #af2aff;
+  outline:none;
+  text-decoration:none;
+  margin-left: 0.5rem;
+  &:hover {
+    color: #9228b3 !important;
+  }
+}
+
+.submitPanel {
+  margin-top: 55px;
+}
+
+.submitButton {
+  border-radius: 5px;
+  background: #fff;
+  background: linear-gradient(180deg, #e8e8e8, #636363);
+  color: #000;
+  outline: none;
+  display: block;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  padding: 15px 38px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.3s all;
+  text-align: center;
+  position: relative;
+  transition: 0.3s background-color, 0.3s color, 0.3s bottom;
+
+  &:disabled {
+    background: #adadad;
+    background: linear-gradient(180deg, #bdbdbd,#5a5a5a);
+    cursor: not-allowed;
+  }
+
+  &:hover:enabled {
+    background: #af2aff;
+    background: linear-gradient(180deg, #b649f7, #571b7b);
+    color:#ffffff;
+  }
+
+  &:active:enabled {
+    background: #7f21b7;
+    background: linear-gradient(180deg, #9032ca, #451065);
+    color:#ffffff;
+    bottom: -1px;
+  }
+}
+
+.formField {
+  position:relative;
+  margin-bottom: 30px;
+}
+
+.inputLine {
+  content: '';
+  position: absolute;
+  background: #af2aff;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 0%;
+  transition: width 0.5s;
+}
+
+.input {
+  outline: none;
+  font-size: 15px;
+  color: #ffffff;
+  padding: 15px 40px 15px 40px;
+  width: 100%;
+  border: none;
+  background: transparent;
+  position: relative;
+  border-bottom: 1px solid #DCCBCF;
+  &:focus + div[data-line] {
+    width: 100%;
+  }
+}
+
+.errorMessage {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  text-transform: none;
+  text-align: center;
+  display: block;
+  width: 100%;
+  padding: 5px;
+  color: #de2525;
+  font-size: 12px;
+}

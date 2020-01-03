@@ -1,11 +1,14 @@
 import React from 'react'
 import useTitle from 'hooks/useTitle'
+import LoginForm from 'components/loginForm/loginForm'
 
 const Login = (props: any) => {
   useTitle('Login Page')
 
   return (
-    <div>Login</div>
+    <div className='page-container'>
+      <LoginForm/>
+    </div>
   )
 }
 

@@ -5,7 +5,7 @@ const NotFound = (props: any) => {
   useTitle('Not found')
 
   return (
-    <div>NotFound</div>
+    <div className='page-container'>NotFound</div>
   )
 }
 
