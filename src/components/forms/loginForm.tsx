@@ -14,7 +14,7 @@ const LoginForm = () => {
   return (
     <FormPanel>
       <FormLabel title='Authorization' />
-      <Form>
+      <Form autoComplete='off'>
         <Field name='name' placeholder='Name' Icon={FaUser} />
         <Field name='password' placeholder='Password' Icon={FaUnlockAlt} type='password' />
         <SubmitPanel>
