@@ -1,8 +1,9 @@
 import React from 'react'
-import { Field as FormikField, ErrorMessage } from 'formik'
+import { Field as FormikField, ErrorMessage, useField } from 'formik'
 import s from 'components/forms/form.module.scss'
 
-const Field = ({ Icon, type, name, placeholder, errors, touched }: any) => {
+const Field = ({ Icon, type, name, placeholder }: any) => {
+  const [, meta] = useField(name)
   return (
     <div className={s.formField}>
       <Icon className={s.formIcon} />
@@ -11,7 +12,7 @@ const Field = ({ Icon, type, name, placeholder, errors, touched }: any) => {
         type={type || 'text'} 
         placeholder={placeholder} 
         name={name} 
-        error={touched[name] && errors[name]}
+        error={meta.touched && meta.error ? meta.error : undefined}
       />
       <div className={s.inputLine} data-line />
       <ErrorMessage className={s.errorMessage} name={name} component="div" />

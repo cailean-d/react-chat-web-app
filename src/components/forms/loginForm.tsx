@@ -10,28 +10,15 @@ import SubmitPanel from 'components/forms/parts/submitPanel'
 import BottomPanel from 'components/forms/parts/bottomPanel'
 import NavLink from 'components/forms/parts/navLink'
 
-const LoginForm = ({ isValid, isSubmitting, errors, touched }: any) => {
+const LoginForm = () => {
   return (
     <FormPanel>
       <FormLabel title='Authorization' />
-      <Form autoComplete='off'>
-        <Field 
-          name='name' 
-          placeholder='Name' 
-          errors={errors} 
-          touched={touched} 
-          Icon={FaUser} 
-        />
-        <Field
-          name='password' 
-          placeholder='Password' 
-          errors={errors} 
-          touched={touched} 
-          Icon={FaUnlockAlt} 
-          type='password' 
-        />
+      <Form>
+        <Field name='name' placeholder='Name' Icon={FaUser} />
+        <Field name='password' placeholder='Password' Icon={FaUnlockAlt} type='password' />
         <SubmitPanel>
-          <SubmitButton text='Sign in' isValid={isValid} isSubmitting={isSubmitting} />
+          <SubmitButton text='Sign in' />
         </SubmitPanel>
       </Form>
       <BottomPanel>
@@ -55,14 +42,11 @@ const validationSchema = Yup.object().shape({
     .required('Required'),
 });
 
-const FormikForm = withFormik<any, any>({
-  displayName: 'LoginForm',
+const FormikForm = withFormik({
   mapPropsToValues: () => ({ name: '', password: '' }),
-  validationSchema: validationSchema,
+  validationSchema,
   validateOnMount: true,
-  handleSubmit(values, { setSubmitting, props }) {
-
-  }
+  handleSubmit(values) {}
 })(LoginForm)
 
 export default FormikForm
