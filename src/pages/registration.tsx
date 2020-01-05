@@ -4,7 +4,6 @@ import RegForm from 'components/forms/regForm'
 
 const Registration = (props: any) => {
   useTitle('Registration Page')
-
   return (
     <div className='page-container'>
       <RegForm />

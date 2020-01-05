@@ -4,6 +4,7 @@ import Home from 'pages/home'
 import Login from 'pages/login'
 import Registration from 'pages/registration'
 import NotFound from 'pages/notfound'
+import Confirm from 'pages/confirm'
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <Home path='/' />
       <Login path='login' />
       <Registration path='reg' />
+      <Confirm path='confirm' />
       <NotFound default />
     </Router>
   )

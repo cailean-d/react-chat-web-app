@@ -4,7 +4,6 @@ import LoginForm from 'components/forms/loginForm'
 
 const Login = (props: any) => {
   useTitle('Login Page')
-
   return (
     <div className='page-container'>
       <LoginForm />

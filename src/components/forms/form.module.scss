@@ -27,7 +27,7 @@
   letter-spacing: 2px;
 }
 
-.regPanel {
+.bottomPanel {
   font-size: 13px;
   color: #eee;
   margin-top: 3em;
@@ -137,4 +137,10 @@
   padding: 5px;
   color: #de2525;
   font-size: 12px;
+}
+
+.confirmInfo {
+  text-transform: none;
+  color: #ccc;
+  text-align: center;
 }
