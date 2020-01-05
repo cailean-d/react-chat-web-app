@@ -14,7 +14,8 @@ body {
 }
 
 .page-container {
-  background: url(./assets/background.jpg) no-repeat 0px 0px;
+  background: url(./assets/background.jpg) no-repeat;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -1,7 +1,7 @@
 .formPanel {
   text-transform: uppercase;
-  background: rgba(4, 4, 4, 0.56);
-  box-shadow: 0px 0px 20px 5px #1F181B;
+  background: linear-gradient(180deg, #480e359e, #150221b0);
+  box-shadow: 0px 0px 20px 5px #000000d4;
   padding: 40px 35px;
   width: 450px;
   user-select: none;
@@ -40,7 +40,7 @@
   outline:none;
   text-decoration:none;
   margin-left: 0.5rem;
-  &:hover {
+  &:hover, &:focus {
     color: #9228b3 !important;
   }
 }
@@ -74,7 +74,7 @@
     cursor: not-allowed;
   }
 
-  &:hover:enabled {
+  &:hover:enabled, &:focus:enabled {
     background: #af2aff;
     background: linear-gradient(180deg, #b649f7, #571b7b);
     color:#ffffff;
