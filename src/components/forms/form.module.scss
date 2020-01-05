@@ -33,6 +33,10 @@
   margin-top: 3em;
   text-align: center;
   text-transform: none;
+
+  .line:not(:first-child) {
+    margin-top: 10px;
+  }
 }
 
 .regLink {

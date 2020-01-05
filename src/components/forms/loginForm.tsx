@@ -9,6 +9,7 @@ import SubmitButton from 'components/forms/parts/submitButton'
 import SubmitPanel from 'components/forms/parts/submitPanel'
 import BottomPanel from 'components/forms/parts/bottomPanel'
 import NavLink from 'components/forms/parts/navLink'
+import BottomPanelLine from 'components/forms/parts/bottomPanelLine'
 
 const LoginForm = () => {
   return (
@@ -22,8 +23,14 @@ const LoginForm = () => {
         </SubmitPanel>
       </Form>
       <BottomPanel>
-        <span>Do not you have an account?</span>
-        <NavLink to="/reg" text='Registration' />
+        <BottomPanelLine>
+          <span>Do not you have an account?</span>
+          <NavLink to="/reg" text='Registration' />
+        </BottomPanelLine>
+        <BottomPanelLine>
+          <span>Forgot a password?</span>
+          <NavLink to="/restore" text='Restore an account' />
+        </BottomPanelLine>
       </BottomPanel>
     </FormPanel>
   )
