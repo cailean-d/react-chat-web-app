@@ -2,6 +2,7 @@ import React from 'react'
 import { FaUser, FaUnlockAlt } from 'react-icons/fa'
 import { Form, withFormik } from 'formik'
 import * as Yup from 'yup'
+import { navigate } from '@reach/router'
 import FormPanel from 'components/forms/parts/formPanel'
 import FormLabel from 'components/forms/parts/formLabel'
 import Field from 'components/forms/parts/field' 
@@ -53,7 +54,9 @@ const FormikForm = withFormik({
   mapPropsToValues: () => ({ name: '', password: '' }),
   validationSchema,
   validateOnMount: true,
-  handleSubmit(values) {}
+  handleSubmit(values) {
+    navigate('/app')
+  }
 })(LoginForm)
 
 export default FormikForm
