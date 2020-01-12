@@ -1,0 +1,39 @@
+.container {
+  height: 100vh;
+  background: #2b2e38;
+  box-shadow: 3px -1px 20px 0px rgba(23, 19, 19, 0.35);
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  color: #94909c;
+  font-size: 25px;
+  position: relative;
+  padding: 20px;
+  background: transparent;
+  transition: color .3s, background-color .3s;
+  cursor: pointer;
+
+  &:hover {
+    color: #fff;
+  }
+
+  &.active {
+    background: rgb(68, 71, 83);
+    color: #fff;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #8291e4;
+      height: 100%;
+      width: 4px;
+    }
+  }
+}
